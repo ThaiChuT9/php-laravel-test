@@ -15,7 +15,7 @@
 </head>
 <body>
     <h1>Phone me broski</h1>
-    <table border="1">
+    <table class="table table-striped table-hover">
         <tr>
             <th>Name</th>
             <th>Phone Number</th>
@@ -32,5 +32,13 @@
         </tr>
         <?php endwhile; ?>
     </table>
+    <h2>Add New Contact</h2>
+    <form action="add_contact.php" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="phone_number">Phone Number:</label>
+        <input type="text" id="phone_number" name="phone_number" required pattern="\d+">
+        <input type="submit" value="Add">
+    </form>
 </body>
 </html>
